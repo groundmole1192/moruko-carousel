@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#111; font-family:'Noto Sans JP',sans-serif; padding:40px 20px; }
+h1 { color:#F7931E; font-size:24px; margin-bottom:8px; }
+p { color:#888; font-size:14px; margin-bottom:32px; }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:1000px; }
+.card { background:#1a1a1a; border-radius:12px; overflow:hidden; }
+.card a { display:block; text-decoration:none; }
+.card iframe { width:100%; aspect-ratio:1; border:none; pointer-events:none; transform-origin:top left; }
+.card-label { padding:12px 16px; color:#ccc; font-size:13px; font-weight:700; }
+.card-label span { color:#F7931E; }
+</style>
+</head>
+<body>
+<h1>🐾 moruko カルーセル — 深夜作業シリーズ</h1>
+<p>各スライドをクリックすると個別ページで開きます</p>
+<div class="grid">
+  <div class="card"><a href="slide_01_cover.html" target="_blank"><iframe src="slide_01_cover.html" scrolling="no"></iframe></a><div class="card-label"><span>01</span> 表紙（フック）</div></div>
+  <div class="card"><a href="slide_02_pain1.html" target="_blank"><iframe src="slide_02_pain1.html" scrolling="no"></iframe></a><div class="card-label"><span>02</span> 痛み①</div></div>
+  <div class="card"><a href="slide_03_pain2.html" target="_blank"><iframe src="slide_03_pain2.html" scrolling="no"></iframe></a><div class="card-label"><span>03</span> 痛み②</div></div>
+  <div class="card"><a href="slide_04_transition.html" target="_blank"><iframe src="slide_04_transition.html" scrolling="no"></iframe></a><div class="card-label"><span>04</span> 転換（moruko登場）</div></div>
+  <div class="card"><a href="slide_05_resolution.html" target="_blank"><iframe src="slide_05_resolution.html" scrolling="no"></iframe></a><div class="card-label"><span>05</span> 解決</div></div>
+  <div class="card"><a href="slide_06_cta.html" target="_blank"><iframe src="slide_06_cta.html" scrolling="no"></iframe></a><div class="card-label"><span>06</span> CTA</div></div>
+</div>
+</body>
+</html>

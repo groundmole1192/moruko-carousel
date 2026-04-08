@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html {
+  background:#222;
+  display:flex; align-items:center; justify-content:center;
+  min-height:100vh;
+}
+body {
+  width:1080px; height:1080px;
+  font-family:'Noto Sans JP',sans-serif;
+  background:#fff;
+  overflow:hidden; position:relative;
+  transform-origin:center center; flex-shrink:0;
+}
+
+.slide {
+  width:100%; height:100%;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  padding:80px;
+  position:relative;
+  text-align:center;
+}
+
+/* スライド番号 */
+.slide-label {
+  font-size:18px; font-weight:700;
+  color:#ccc; letter-spacing:0.08em;
+  margin-bottom:48px;
+}
+
+/* ロゴ大 */
+.logo-large {
+  margin-bottom:40px;
+}
+.logo-large img { height:72px; }
+
+/* メインCTA */
+.cta-main {
+  font-size:52px; font-weight:900;
+  color:#3E1F00; line-height:1.3;
+  margin-bottom:40px;
+  letter-spacing:-0.01em;
+}
+
+/* CTAボタン風 */
+.cta-btn {
+  background:#5AAD3F;
+  color:#fff;
+  font-size:26px; font-weight:700;
+  padding:22px 52px;
+  border-radius:999px;
+  margin-bottom:40px;
+  letter-spacing:0.03em;
+  box-shadow:0 8px 28px rgba(90,173,63,0.3);
+}
+
+/* アカウント名 */
+.account {
+  font-size:22px; font-weight:700;
+  color:#aaa; letter-spacing:0.05em;
+}
+
+/* グリーンライン装飾 */
+.deco-line {
+  position:absolute;
+  top:0; left:0; right:0;
+  height:8px;
+  background:linear-gradient(90deg, #F7931E, #5AAD3F);
+}
+.deco-line-bottom {
+  position:absolute;
+  bottom:0; left:0; right:0;
+  height:8px;
+  background:linear-gradient(90deg, #5AAD3F, #F7931E);
+}
+</style>
+</head>
+<body>
+
+<div class="deco-line"></div>
+<div class="deco-line-bottom"></div>
+
+<div class="slide">
+
+  <div class="slide-label">6 / 6</div>
+
+  <div class="logo-large">
+    <img src="morukoimage/moruko_logo_squaire.png" alt="moruko">
+  </div>
+
+  <div class="cta-main">
+    morukoのこと、<br>もっと知りたい方へ。
+  </div>
+
+  <div class="cta-btn">
+    👆 プロフィールのリンクから詳細を見てください
+  </div>
+
+  <div class="account">@north_ai_manager</div>
+
+</div>
+
+<script>
+function fit(){const s=Math.min(window.innerWidth,window.innerHeight)/1080;document.body.style.transform=`scale(${s})`;}
+fit();window.addEventListener('resize',fit);
+</script>
+</body>
+</html>
