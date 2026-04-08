@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html {
+  background:#222;
+  display:flex; align-items:center; justify-content:center;
+  min-height:100vh;
+}
+body {
+  width:1080px; height:1080px;
+  font-family:'Noto Sans JP',sans-serif;
+  background:#fff;
+  overflow:hidden; position:relative;
+  transform-origin:center center; flex-shrink:0;
+}
+
+.slide {
+  width:100%; height:100%;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  padding:80px;
+  gap:40px;
+  position:relative;
+}
+
+/* 状況テキスト（中央） */
+.situation {
+  font-size:96px; font-weight:900;
+  color:#3E1F00; line-height:1.2;
+  letter-spacing:-0.02em;
+  text-align:center;
+}
+.situation em {
+  color:#D4640A; font-style:normal;
+}
+
+/* 内心の声ボックス */
+.inner-voice {
+  background:#F2F2F2;
+  border-radius:16px;
+  padding:28px 40px;
+  width:100%;
+  text-align:center;
+}
+.inner-voice .quote {
+  font-size:28px; font-weight:700;
+  color:#555; line-height:1.6;
+  white-space:nowrap;
+}
+.inner-voice .quote::before { content: '「'; }
+.inner-voice .quote::after { content: '」'; }
+
+/* 補足 */
+.note {
+  font-size:24px; font-weight:700;
+  color:#bbb; letter-spacing:0.03em;
+  text-align:center;
+}
+
+/* ロゴ */
+.logo {
+  position:absolute; bottom:48px; right:64px;
+}
+.logo img { height:24px; opacity:0.3; }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="situation">
+    {{ situation_line1 }}<br><em>{{ situation_line2 }}</em>
+  </div>
+
+  <div class="inner-voice">
+    <div class="quote">{{ inner_voice }}</div>
+  </div>
+
+  <div class="note">{{ note }}</div>
+
+</div>
+
+<div class="logo">
+  <img src="morukoimage/moruko_logo_wide.png" alt="moruko">
+</div>
+
+<script>
+function fit(){const s=Math.min(window.innerWidth,window.innerHeight)/1080;document.body.style.transform=`scale(${s})`;}
+fit();window.addEventListener('resize',fit);
+</script>
+</body>
+</html>
