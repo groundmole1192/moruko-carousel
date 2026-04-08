@@ -42,14 +42,15 @@ body {
 /* 内心の声ボックス */
 .inner-voice {
   background:#F2F2F2;
-  border-left:6px solid #ddd;
-  border-radius:0 16px 16px 0;
+  border-radius:16px;
   padding:28px 40px;
   width:100%;
+  text-align:center;
 }
 .inner-voice .quote {
   font-size:28px; font-weight:700;
   color:#555; line-height:1.6;
+  white-space:nowrap;
 }
 .inner-voice .quote::before { content: '「'; }
 .inner-voice .quote::after { content: '」'; }
@@ -76,7 +77,7 @@ body {
   </div>
 
   <div class="inner-voice">
-    <div class="quote">また今日も<br>終わらなかった...</div>
+    <div class="quote">また今日も終わらなかった...</div>
   </div>
 
   <div class="note">これ、3年続いてます。</div>
