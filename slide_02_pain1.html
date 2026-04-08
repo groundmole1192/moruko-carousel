@@ -22,29 +22,18 @@ body {
 .slide {
   width:100%; height:100%;
   display:flex; flex-direction:column;
-  padding:64px 80px;
+  align-items:center; justify-content:center;
+  padding:80px;
+  gap:40px;
   position:relative;
 }
 
-/* スライド番号 + 見出し */
-.slide-label {
-  font-size:22px; font-weight:700;
-  color:#aaa; letter-spacing:0.05em;
-  margin-bottom:48px;
-  display:flex; align-items:center; gap:10px;
-}
-.slide-num {
-  background:#F2F2F2; color:#999;
-  font-size:16px; padding:4px 12px;
-  border-radius:999px;
-}
-
-/* 状況テキスト */
+/* 状況テキスト（中央） */
 .situation {
-  font-size:88px; font-weight:900;
+  font-size:96px; font-weight:900;
   color:#3E1F00; line-height:1.2;
   letter-spacing:-0.02em;
-  margin-bottom:48px;
+  text-align:center;
 }
 .situation em {
   color:#D4640A; font-style:normal;
@@ -53,10 +42,10 @@ body {
 /* 内心の声ボックス */
 .inner-voice {
   background:#F2F2F2;
-  border-left:5px solid #ddd;
-  border-radius:0 12px 12px 0;
-  padding:28px 36px;
-  margin-bottom:36px;
+  border-left:6px solid #ddd;
+  border-radius:0 16px 16px 0;
+  padding:28px 40px;
+  width:100%;
 }
 .inner-voice .quote {
   font-size:28px; font-weight:700;
@@ -67,8 +56,9 @@ body {
 
 /* 補足 */
 .note {
-  font-size:22px; font-weight:700;
+  font-size:24px; font-weight:700;
   color:#bbb; letter-spacing:0.03em;
+  text-align:center;
 }
 
 /* ロゴ */
@@ -80,11 +70,6 @@ body {
 </head>
 <body>
 <div class="slide">
-
-  <div class="slide-label">
-    <span class="slide-num">2 / 6</span>
-    😔 深夜の作業部屋
-  </div>
 
   <div class="situation">
     未読メール、<br><em>83件。</em>
